@@ -47,7 +47,9 @@ void DAC_out(const uint16_t * const ch_A, const uint16_t * const ch_B);
 
 
 Second order IIR -- "Direct Form I Transposed"
+
 a(0)*y(n) = b(0)*x(n) + b(1)*x(n-1) +  b(2)*x(n-2) - a(1)*y(n-1) -  a(2)*y(n-2)
+
 assumes a(0) = IIRSCALEFACTOR = 32
 
 Compute filter function coefficients
@@ -67,7 +69,7 @@ void IIRFilter( filter_t * const filter, int16_t * const xn );
 ## Compatibility
 
   * ATmega1284p @ 24.576MHz : Seeed Studio Goldilocks Analogue
-  * MCP4822 DAC platforms.
+  * Other MCP4822 DAC platforms.
 
 ## Files & Configuration
 
@@ -142,6 +144,6 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  // nothing here... becuase we use the Timer 3 to generate audio at the sampling rate.
+  // nothing here... because we use the Timer 3 to generate audio at the sampling rate.
 }
 ```
