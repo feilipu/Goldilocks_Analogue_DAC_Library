@@ -19,8 +19,17 @@ extern "C" {
  */
 //#define DEBUG_PING
 
-#define FALSE       0
-#define TRUE        1
+#ifndef NULL              /* pointer to nothing */
+   #define NULL ((void *) 0)
+#endif
+
+#ifndef TRUE              /* Boolean true */
+   #define TRUE (1)
+#endif
+
+#ifndef FALSE              /* Boolean false */
+   #define FALSE (0)
+#endif
 
 /*
  * Bytes used to control the MCP4822 DAC
